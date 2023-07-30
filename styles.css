@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.calculator{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.display{
+    min-height: 140px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    flex: 1 1 0%;
+    margin: 20px;
+    background: #cdeffc;
+    border-radius: 15px;
+}
+
+.display .input{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.display .output{
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .operator, .display .brackets, .display .percent{
+    color: #EB6666;
+}
+
+.keys{
+    background-color: #fff;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+}
+
+.keys .key{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    border-radius: 1.2rem;
+    transition: 0.2s;
+    user-select: none;
+}
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.key{
+    background-color: #cfedf9;
+}
+.operator, .action{
+    background-color: #95dbf7;
+}
